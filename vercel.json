@@ -1,7 +1,5 @@
 {
   "version": 2,
-  "buildCommand": "pnpm --filter @workspace/api-server... run build",
-  "installCommand": "pnpm install",
   "routes": [
     {
       "src": "/(.*)",
