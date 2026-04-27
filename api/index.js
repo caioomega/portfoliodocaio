@@ -1,1 +1,4 @@
-export { default } from "../artifacts/api-server/dist/handler.mjs";
+module.exports = async (req, res) => {
+  const { default: app } = await import("../artifacts/api-server/dist/handler.mjs");
+  return app(req, res);
+};
