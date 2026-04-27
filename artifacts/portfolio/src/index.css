@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-card-border: hsl(var(--card-border));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-popover-border: hsl(var(--popover-border));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary-border: var(--primary-border);
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-secondary-border: var(--secondary-border);
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-muted-border: var(--muted-border);
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-accent-border: var(--accent-border);
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-destructive-border: var(--destructive-border);
+
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Space Grotesk", sans-serif;
+  --font-mono: Menlo, monospace;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --button-outline: rgba(255,255,255, .10);
+  --badge-outline: rgba(255,255,255, .05);
+  --opaque-button-border-intensity: 9;
+  --elevate-1: rgba(255,255,255, .04);
+  --elevate-2: rgba(255,255,255, .09);
+
+  /* Premium Dark Cinema Mode */
+  --background: 0 0% 0%; /* Pitch black */
+  --foreground: 0 0% 98%; /* Pure white */
+  --border: 0 0% 15%;
+  --card: 0 0% 4%;
+  --card-foreground: 0 0% 98%;
+  --card-border: 0 0% 15%;
+  --popover: 0 0% 4%;
+  --popover-foreground: 0 0% 98%;
+  --popover-border: 0 0% 15%;
+  
+  --primary: 0 0% 98%; /* White as primary */
+  --primary-foreground: 0 0% 0%;
+  
+  --secondary: 0 0% 15%;
+  --secondary-foreground: 0 0% 98%;
+  
+  --accent: 18 95% 58%; /* Cinematic warm orange */
+  --accent-foreground: 0 0% 98%;
+
+  --muted: 0 0% 10%;
+  --muted-foreground: 0 0% 60%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --input: 0 0% 15%;
+  --ring: 18 95% 58%;
+
+  --radius: 0.5rem;
+}
+
+.dark {
+  --button-outline: rgba(255,255,255, .10);
+  --badge-outline: rgba(255,255,255, .05);
+  --opaque-button-border-intensity: 9;
+  --elevate-1: rgba(255,255,255, .04);
+  --elevate-2: rgba(255,255,255, .09);
+
+  /* Deep Night Ocean Mode */
+  --background: 0 0% 0%; /* Pitch black */
+  --foreground: 0 0% 98%; /* Pure white */
+  --border: 0 0% 15%;
+  --card: 0 0% 4%;
+  --card-foreground: 0 0% 98%;
+  --card-border: 0 0% 15%;
+  --popover: 0 0% 4%;
+  --popover-foreground: 0 0% 98%;
+  --popover-border: 0 0% 15%;
+  
+  --primary: 0 0% 98%; /* White as primary */
+  --primary-foreground: 0 0% 0%;
+  
+  --secondary: 0 0% 15%;
+  --secondary-foreground: 0 0% 98%;
+  
+  --accent: 18 95% 58%; /* Cinematic warm orange */
+  --accent-foreground: 0 0% 98%;
+
+  --muted: 0 0% 10%;
+  --muted-foreground: 0 0% 60%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --input: 0 0% 15%;
+  --ring: 18 95% 58%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+.bg-noise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+
+.dark .bg-noise {
+  opacity: 0.08;
+  mix-blend-mode: overlay;
+}
+
+.wave-clip {
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 80% 100%, 20% 95%, 0 100%);
+}
+
+.ocean-gradient {
+  background: linear-gradient(180deg, hsl(var(--background)) 0%, hsla(190, 90%, 40%, 0.05) 100%);
+}
+
+.sun-glow {
+  background: radial-gradient(circle at center, hsla(45, 95%, 55%, 0.3) 0%, transparent 70%);
+}
+
+.text-glow-sun {
+  text-shadow: 0 0 20px hsla(45, 95%, 55%, 0.5);
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* Cinematic scene transitions — soft blend between acts */
+.act-section {
+  position: relative;
+}
+.act-section::before,
+.act-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 140px;
+  pointer-events: none;
+  z-index: 5;
+}
+.act-section::before {
+  top: 0;
+  background: linear-gradient(to bottom, #000 0%, transparent 100%);
+}
+.act-section::after {
+  bottom: 0;
+  background: linear-gradient(to top, #000 0%, transparent 100%);
+}
+
+/* The horizontal-scroll projects scene clips internally; keep its overlays clean */
+.projects-container::before,
+.projects-container::after {
+  height: 100px;
+}
+
+/* Hero scene shouldn't have a top fade (it's the first scene) */
+.hero-container::before {
+  display: none;
+}
+/* Contact (last scene) doesn't need a bottom fade */
+.contact-container::after {
+  display: none;
+}
+
+/* === Arsenal scene (Act 05) — animated mesh background === */
+@keyframes arsenal-blob-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(180px, -120px) scale(1.15); }
+  66% { transform: translate(-120px, 180px) scale(0.9); }
+}
+@keyframes arsenal-blob-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-200px, 140px) scale(1.1); }
+  66% { transform: translate(160px, -160px) scale(0.95); }
+}
+@keyframes arsenal-blob-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(120px, 80px) scale(1.2); }
+}
+.arsenal-blob-1 { animation: arsenal-blob-1 22s ease-in-out infinite; }
+.arsenal-blob-2 { animation: arsenal-blob-2 26s ease-in-out infinite; }
+.arsenal-blob-3 { animation: arsenal-blob-3 18s ease-in-out infinite; }
+
+@keyframes arsenal-grid-pulse {
+  0%, 100% { opacity: 0.04; }
+  50% { opacity: 0.08; }
+}
+.arsenal-grid {
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.5) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.5) 1px, transparent 1px);
+  background-size: 64px 64px;
+  animation: arsenal-grid-pulse 8s ease-in-out infinite;
+}
+
+@keyframes arsenal-title-shimmer {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+.arsenal-title-gradient {
+  background: linear-gradient(90deg, #fb923c 0%, #f97316 25%, #ea580c 50%, #f97316 75%, #fb923c 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: arsenal-title-shimmer 6s linear infinite;
+}
+
+.arsenal-card {
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.3s ease;
+}
+.arsenal-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, transparent 30%, rgba(249, 115, 22, 0.45) 50%, transparent 70%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+.arsenal-card:hover::before {
+  opacity: 1;
+}
+
+/* === Footer scene — End Credits === */
+@keyframes footer-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.footer-marquee-track {
+  animation: footer-marquee 35s linear infinite;
+}
+
+@keyframes footer-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+.footer-status-dot {
+  animation: footer-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes footer-glow-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.footer-name-glow {
+  position: absolute;
+  inset: -50%;
+  background: conic-gradient(from 0deg, #fb923c, #f97316, #dc2626, #fb923c);
+  filter: blur(80px);
+  opacity: 0.3;
+  animation: footer-glow-rotate 20s linear infinite;
+  pointer-events: none;
+}
+
+.footer-name-outline {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
+  color: transparent;
+  transition: -webkit-text-stroke 0.4s ease, color 0.4s ease;
+}
+.footer-name-outline:hover {
+  -webkit-text-stroke: 1px transparent;
+  background: linear-gradient(135deg, #fb923c 0%, #f97316 50%, #dc2626 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.magnetic-cta {
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.footer-social-link {
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  display: inline-block;
+  word-break: break-all;
+}
+.footer-social-link:hover {
+  letter-spacing: 0.05em;
+  color: hsl(var(--accent));
+}
+

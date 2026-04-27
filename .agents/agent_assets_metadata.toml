@@ -1,0 +1,32 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "c3yhp6agG-bEbp0rXSgrS"
+uri = "file://artifacts/portfolio/public/images/hero.png"
+type = "image"
+title = "Cinematic portrait of 17yo developer"
+
+[[generated]]
+id = "Dc97OxQ8gDtOr4txdksp_"
+uri = "file://artifacts/portfolio/public/images/project-1.png"
+type = "image"
+title = "Sunny beachside desk with code"
+
+[[generated]]
+id = "CUyXxjRqWf8jTvdqQhY5Q"
+uri = "file://artifacts/portfolio/public/images/project-2.png"
+type = "image"
+title = "Laptop on beachside table"
+
+[[generated]]
+id = "QUqLzlgczgiQ_JIy9onbv"
+uri = "file://artifacts/portfolio/public/images/project-3.png"
+type = "image"
+title = "Abstract sunny architecture"
+
+[[generated]]
+id = "ioE1uPgptcWvEu2zeGZ56"
+uri = "file://artifacts/portfolio/public/images/project-4.png"
+type = "image"
+title = "Mobile app beach background"

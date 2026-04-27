@@ -1,0 +1,161 @@
+project:
+  name: "Caio Portfolio Cinematic"
+  type: "premium_web_portfolio"
+  goal: "Create a cinematic portfolio experience that integrates a personal photo into the design and storytelling"
+
+developer_profile:
+  name: "Caio"
+  age: 17
+  experience: "5+ years in software development (started at 13)"
+  role: "Full Stack Developer"
+  focus:
+    - "Performance"
+    - "Clean Architecture"
+    - "Scalability"
+  technologies:
+    - Go
+    - JavaScript
+    - TypeScript (TSX)
+    - PHP
+    - Dart
+    - HTML
+    - CSS
+  learning:
+    - "Industrial Automation"
+    - "PLC (CLP)"
+
+visual_identity:
+  based_on_image: true
+  image_style_analysis:
+    lighting: "Golden hour sunlight (warm tones)"
+    mood: "Confident, calm, natural, real-life authenticity"
+    colors:
+      - "Warm sunlight (golden/yellow tones)"
+      - "Sky blue"
+      - "Urban neutral tones (gray, asphalt)"
+      - "Green from trees"
+  theme_translation:
+    concept: "Modern developer grounded in the real world"
+    contrast: "Nature + Technology"
+    feeling: "Human + Professional + Premium"
+
+design:
+  style: "Sophisticated cinematic SaaS with lifestyle integration"
+  colors:
+    background: "#0B0B0C"
+    primary: "#121212"
+    accent_gold: "#D6B25E"
+    accent_blue: "#3A7CA5"
+    subtle_green: "#4C7A5A"
+    text: "#EAEAEA"
+  effects:
+    - "Soft sunlight gradient overlays"
+    - "Glassmorphism (very subtle)"
+    - "Cinematic blur"
+    - "Light reflection effects"
+  typography: "Minimal, modern, premium"
+
+hero_section:
+  layout: "Full screen immersive"
+  background:
+    type: "Image (the provided photo)"
+    behavior:
+      - "Parallax on scroll"
+      - "Slight zoom-in animation"
+      - "Soft dark overlay for readability"
+  animations:
+    - "Sunlight glow effect moving subtly"
+    - "Lens reflection simulation"
+  content:
+    title: "5+ years in software development — now 17."
+    subtitle: "Building real systems in the real world."
+    position: "Overlay centered or slightly off-center (cinematic)"
+  effects:
+    - "Text fade-in with delay"
+    - "Smooth upward motion"
+    - "Depth effect (foreground vs background)"
+
+experience:
+  concept: "Scrolling feels like moving through moments"
+  animations:
+    - "Scroll storytelling"
+    - "Sections fade like scenes"
+    - "Parallax layers (foreground/midground/background)"
+    - "Smooth transitions like video cuts"
+  performance: "60fps, optimized animations"
+
+sections:
+
+  about:
+    style: "Story-driven"
+    text: "Started coding at 13, evolving into a developer focused on real-world impact and scalable systems."
+    animation:
+      - "Text reveal word-by-word"
+      - "Soft fade with motion"
+
+  stack:
+    layout: "Floating tech icons"
+    animation:
+      - "Icons gently floating (like particles)"
+      - "Hover glow inspired by sunlight"
+    theme: "Technology emerging from real-world background"
+
+  projects:
+    priority: "VERY HIGH"
+    layout: "Cinematic cards"
+    effects:
+      - "Hover zoom + blur background"
+      - "Light reflection sweep"
+    animation:
+      - "Cards appear like scenes"
+      - "Smooth stagger entrance"
+
+  diferencial:
+    concept: "Young but ahead"
+    highlights:
+      - "5+ years experience"
+      - "Performance-driven mindset"
+      - "Real-world focus"
+    animation:
+      - "Highlight glow passing through text"
+      - "Reveal with contrast lighting"
+
+  automation:
+    theme: "Future expansion"
+    description: "Expanding into industrial automation and PLC systems"
+    visual:
+      - "Subtle industrial/tech animation"
+      - "Contrast with natural hero image"
+
+  contact:
+    style: "Clean + premium"
+    elements:
+      - "Animated social icons"
+      - "Glow on hover"
+    cta: "Let's build something real"
+
+image_usage:
+  rules:
+    - "Main hero background (primary visual anchor)"
+    - "Optional cropped version for About section"
+    - "Use blur and overlays to maintain readability"
+    - "Never distort or over-edit the image"
+  enhancements:
+    - "Add subtle grain for cinematic feel"
+    - "Light leak effects"
+    - "Soft vignette"
+
+technical:
+  framework: "React"
+  styling: "TailwindCSS"
+  animations: "Framer Motion + scroll-based animation"
+  optimization:
+    - "Lazy loading images"
+    - "Optimized assets"
+    - "Smooth rendering"
+
+objective:
+  - "Feel like a cinematic experience"
+  - "Combine personal identity with technical skill"
+  - "Stand out instantly to recruiters"
+  - "Show maturity beyond age"
